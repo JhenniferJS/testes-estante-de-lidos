@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-25T23:56:34.434Z",
+    "end": "2022-05-25T23:56:41.223Z",
+    "duration": 5022,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "85cbfc00-a566-4ca7-8c90-431f0411add1",
+      "title": "",
+      "fullFile": "cypress/integration/estante-de-lidos.spec.js",
+      "file": "cypress/integration/estante-de-lidos.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8e90f1c9-ccc6-4692-ae5c-5d236a67a2be",
+          "title": "Testes Estante de Lidos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Tela inicial",
+              "fullTitle": "Testes Estante de Lidos Tela inicial",
+              "timedOut": null,
+              "duration": 773,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".titulo\").contains(\"O que você precisa hoje?\").should(\"be.visible\");\ncy.contains(\"a\", \"Livro\").should(\"be.visible\");\ncy.contains(\"a\", \"Material didático\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "92cdc82a-d263-4ade-b0b8-d9c2bb88a429",
+              "parentUUID": "8e90f1c9-ccc6-4692-ae5c-5d236a67a2be",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verificar ausencia de livros",
+              "fullTitle": "Testes Estante de Lidos Verificar ausencia de livros",
+              "timedOut": null,
+              "duration": 659,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(\"a\", \"Livro\").click();\ncy.contains(\"h5\", \"Não há livros cadastrados\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "79fb5d8d-e55d-480a-9d52-235998f9ee2f",
+              "parentUUID": "8e90f1c9-ccc6-4692-ae5c-5d236a67a2be",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verificar ausencia de materiais didaticos",
+              "fullTitle": "Testes Estante de Lidos Verificar ausencia de materiais didaticos",
+              "timedOut": null,
+              "duration": 341,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(\"a\", \"Material didático\").click();\ncy.contains(\"h5\", \"Não há materiais cadastrados\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "1d7b6067-163b-4884-980c-e71eb5fca5eb",
+              "parentUUID": "8e90f1c9-ccc6-4692-ae5c-5d236a67a2be",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cadastrar livro",
+              "fullTitle": "Testes Estante de Lidos Cadastrar livro",
+              "timedOut": null,
+              "duration": 1752,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(\"a\", \"ANUNCIAR\").click();\ncy.contains(\"legend\", \"O que você deseja anunciar?\").should(\"be.visible\");\ncy.get(\"input[value='livro']\").click();\ncy.get(\"input[placeholder='Nome do conteúdo']\").type(\"Dom Quixote\");\ncy.get(\"input[placeholder='Valor']\").type(\"10.0\");\ncy.get(\"input[name='vendedor-nome']\").type(\"Jhennifer Siqueira\");\ncy.get(\"input[placeholder='Telefone']\").type(\"35 992184605\");\ncy.get(\"input[type='submit']\").click();\ncy.get(\".titulo\").contains(\"O que você precisa hoje?\").should(\"be.visible\");\ncy.contains(\"a\", \"Livro\").click();\ncy.contains(\"li\", \"Dom Quixote\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "cc3ae565-7d20-4adc-8f9b-a104a676832f",
+              "parentUUID": "8e90f1c9-ccc6-4692-ae5c-5d236a67a2be",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cadastrar material didatico",
+              "fullTitle": "Testes Estante de Lidos Cadastrar material didatico",
+              "timedOut": null,
+              "duration": 1497,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(\"a\", \"ANUNCIAR\").click();\ncy.contains(\"legend\", \"O que você deseja anunciar?\").should(\"be.visible\");\ncy.get(\"input[value='material']\").click();\ncy.get(\"input[placeholder='Nome do conteúdo']\").type(\"Calculo 1\");\ncy.get(\"#gratis\").check();\ncy.get(\"input[name='vendedor-nome']\").type(\"Jhennifer Siqueira\");\ncy.get(\"input[placeholder='Telefone']\").type(\"35 992184605\");\ncy.get(\"input[type='submit']\").click();\ncy.get(\".titulo\").contains(\"O que você precisa hoje?\").should(\"be.visible\");\ncy.contains(\"a\", \"Material didático\").click();\ncy.contains(\"li\", \"Calculo 1\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "48214059-6596-4a04-8ddc-53317dd745cd",
+              "parentUUID": "8e90f1c9-ccc6-4692-ae5c-5d236a67a2be",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "92cdc82a-d263-4ade-b0b8-d9c2bb88a429",
+            "79fb5d8d-e55d-480a-9d52-235998f9ee2f",
+            "1d7b6067-163b-4884-980c-e71eb5fca5eb",
+            "cc3ae565-7d20-4adc-8f9b-a104a676832f",
+            "48214059-6596-4a04-8ddc-53317dd745cd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5022,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
