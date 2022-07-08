@@ -2,4 +2,4 @@
 
 ## Sobre
 
-- Testes e2e criados para o protótipo Estante de Lidos, utilizando a ferramenta Cypress.
+- Testes e2e criados para o projeto [Estante de Lidos](https://github.com/JhenniferJS/projeto-Estante-de-Lidos), utilizando a ferramenta Cypress.
